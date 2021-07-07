@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+		<script type="text/javascript">
+		
+			$(function(){
+				//1.click
+				/*$(".head").click(function () {
+					//传入参数就是绑定事件
+					console.log("click绑定事件");
+				});*/
+				/*$("button").click(function () {
+					//不传参数就是触发事件
+					$(".head").click();
+				});*/
+
+				//2.mouseover
+				/*$(".head").mouseover(function () {
+					console.log("mouseover鼠标移入事件");
+				});*/
+
+				//3.mouseout
+				/*$(".head").mouseout(function () {
+					console.log("mouseout鼠标移出事件");
+				});*/
+
+				//4.bind
+				/*$(".head").bind("click mouseover mouseout",function () {
+					console.log("bind绑定一个或者多个事件");
+				});*/
+
+				//5.unbind
+				//如果不传参数就是全部事件解除绑定
+				//$(".head").unbind();
+				//如果传递参数，传递已有的事件，就解除已有的绑定事件
+				//$(".head").unbind("click");
+
+				//6.one
+				//one绑定的事件只响应一次
+				/*$(".head").one("click mouseover mouseout",function () {
+					console.log("one绑定一个或者多个事件，但是只响应一次");
+				});*/
+
+				//7.live
+				/*$(".head").live("click mouseover mouseout",function () {
+					console.log("live事件能够绑定正在被绑定的元素的所有相同元素");
+				});*/
+				//必须和选择器中的元素一样，才有效果
+				//$("<h5 class='head'>什么是jQuery?</h5>").appendTo($("#panel"));
+
+				//8.die
+				//取消live事件
+				//$(".head").die();
+
+				//9.mousedown
+				//鼠标按下事件
+				/*$(".head").mousedown(function () {
+					console.log("mousedown事件");
+				});*/
+
+				//10.mouseup
+				//鼠标抬起事件
+				/*$(".head").mouseup(function () {
+					console.log("mouseup事件");
+				});*/
+			});
+		
+		</script>
+	</head>
+	<body>
+		<div id="panel">
+			<h5 class="head">什么是jQuery?</h5>
+			<button>按钮</button>
+			<div class="content">
+				jQuery是继Prototype之后又一个优秀的JavaScript库，它是一个由 John Resig 创建于2006年1月的开源项目。jQuery凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档、操作DOM、处理事件、执行动画和开发Ajax。它独特而又优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式。
+			</div>
+		</div>
+	</body>
+
+</html>

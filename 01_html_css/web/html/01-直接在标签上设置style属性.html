@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+    <style>
+        div {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 样式一，直接在标签内部添加style属性 -->
+    <!-- border:border-width 边框宽度 -->
+        <!-- medium 默认宽度 -->
+        <!-- thin 小于默认宽度 -->
+        <!-- thick 大于默认宽度 -->
+        <!-- 上述几个属性不常用，而经常使用的是length，设置长度一般为px像素单位 -->
+    <!-- border:border-style 边框样式 -->
+        <!-- none 无边框 -->
+        <!-- solid 实线 -->
+        <!-- dashed 虚线 -->
+        <!-- dotted 点线 -->
+        <!-- double 双实线 -->
+    <!-- border:border-color 边框颜色 -->
+    <div style="border-width: 1px;border-style: solid;border-color: red">div盒子1</div>
+    <!-- style="border: 宽度 样式 颜色" -->
+    <div style="border: 1px solid red">div盒子2</div>
+    <div>div盒子3</div>
+</body>
+</html>

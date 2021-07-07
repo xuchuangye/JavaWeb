@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>not_overload</title>
+    <script type="text/javascript">
+        function fun() {
+            alert("无参函数被调用了");
+        }
+        function fun(a, b) {
+            alert("有参函数被调用了，结果为" + (a + b));
+        }
+        //此时有参函数fun(a, b)覆盖了无参函数fun()
+        fun();//有参函数被调用了，结果为NaN
+
+        function fun_(m, n){
+            return m / n;
+        }
+        function fun_() {
+            alert("无参函数");
+        }//此时无参函数fun_()覆盖了有参函数fun_(m, n)
+        fun_(10,2);//无参函数
+    </script>
+</head>
+<body>
+
+</body>
+</html>

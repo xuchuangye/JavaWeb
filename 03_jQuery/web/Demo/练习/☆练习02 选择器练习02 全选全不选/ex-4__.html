@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            //全选
+            $("#checkedAllBtn").click(function () {
+                $(":checkbox").prop("checked", true);
+            });
+            //全不选
+            $("#checkedNoBtn").click(function () {
+                $(":checkbox").prop("checked", false);
+            });
+            //反选
+            $("#checkedRevBtn").click(function () {
+                $(":checkbox[name=items]").each(function () {
+                    //针对每一个复选框
+                    if (this.checked) {
+                        this.checked = false;
+                    } else {
+                        this.checked = true;
+                    }
+                });
+                //遍历完成之后，检查是否全部选中
+                //全部个数
+                let $allCount = $(":checkbox[name=items]").length;
+                //被选中的个数
+                let $checkedCount = $(":checkbox[name=items]:checked").length;
+                /*if ($allCount == $checkedCount) {
+                    $("#checkedAllBox").prop("checked",true);
+                }else {
+                    $("#checkedAllBox").prop("checked",false);
+                }*/
+                $("#checkedAllBox").prop("checked",$allCount == $checkedCount);
+            });
+            //提交
+            $("#sendBtn").click(function () {
+                $(":checkbox[name=items]:checked").each(function () {
+                    if ($(this).prop("checked")) {
+                        alert(this.value);
+                    }
+                });
+            });
+            //全选/全不选
+            $("#checkedAllBox").click(function () {
+                //function函数中有一个this对象，这个对象是当前正在响应的dom对象
+                //alert(this.checked);
+                $(":checkbox[name=items]").prop("checked",this.checked);
+            });
+            //所有的name=items复选框
+            $(":checkbox[name=items]").click(function () {
+                let $allCount = $(":checkbox[name=items]").length;
+                let $checkedCount = $(":checkbox[name=items]:checked").length;
+                $("#checkedAllBox").prop("checked",$allCount == $checkedCount);
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<form method="post" action="">
+
+    你爱好的运动是？<input type="checkbox" id="checkedAllBox"/>全选/全不选
+
+    <br/>
+    <input type="checkbox" name="items" value="足球"/>足球
+    <input type="checkbox" name="items" value="篮球"/>篮球
+    <input type="checkbox" name="items" value="羽毛球"/>羽毛球
+    <input type="checkbox" name="items" value="乒乓球"/>乒乓球
+    <br/>
+    <input type="button" id="checkedAllBtn" value="全　选"/>
+    <input type="button" id="checkedNoBtn" value="全不选"/>
+    <input type="button" id="checkedRevBtn" value="反　选"/>
+    <input type="button" id="sendBtn" value="提　交"/>
+</form>
+
+</body>
+</html>

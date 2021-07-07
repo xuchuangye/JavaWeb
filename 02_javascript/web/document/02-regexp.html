@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //要求字符串包含字母e
+        // let patt = new RegExp("e");
+        // let patt = /e/;//也是正则表达式对象
+        //要求字符串包含字母a或b或c
+        // let patt = /[abc]/;
+        //要求字符串包含小写字母a-z的任意一个字母
+        // let patt = /[a-z]/;
+        //要求字符串包含大写字母A-Z的任意一个字母
+        // let patt = /[A-Z]/;
+        //要求字符串包含数字0-9的任意一个数字
+        // let patt = /[0-9]/;
+        //要求字符串包含大小写字母、数字、下划线中的任意一个字符
+        // let patt = /\w/;
+        //要求字符串必须包含至少一个小写字母a
+        //let patt = /a+/;
+        //要求字符串包含0个a或者多个a
+        //let patt = /a*/;
+        //要求字符串包含一个或者0个a
+        //let patt = /a?/;
+        //要求字符串包含连续的三个a
+        // let patt = /a{3}/;
+        //要求字符串包含至少连续的三个a，最多连续的五个a
+        // let patt = /a{3,5}/;
+        //要求字符串包含至少连续的三个a
+        // let patt = /a{3,}/;
+        //要求字符串必须以字母a结尾
+        //let patt = /a$/;
+        //要求字符串必须以字母a开始
+        //let patt = /^a/;
+
+        //要求字符串从头到尾都必须匹配最少连续三个的字母a，最多包含五个连续的字母a
+        // let patt = /^a{3,5}$/;
+        //要求字符串必须是字母，数字，下划线，并且长度在6-12之间
+        let patt = /^\w{6,12}$/;
+
+        let str = "[][][]rge3342]]]_____";
+        alert(patt.test(str));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

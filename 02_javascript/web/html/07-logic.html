@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>logic</title>
+    <script type="text/javascript">
+        //0,null,undefined,空字符串都为false，其他都为true
+        if (0) {
+
+        } else {
+            alert("0为false");
+        }
+        if (null) {
+
+        } else {
+            alert("null为false");
+        }
+        if (undefined) {
+
+        } else {
+            alert("undefined为false");
+        }
+        if ("") {
+
+        } else {
+            alert("空字符串为false");
+        }
+        //&&与运算
+        //当表达式全为true时，返回最后一个表达式的值
+        //当表达式有一个为false时，返回第一个为false的表达式的值
+        var a = "abc";
+        var b = true;
+        var d = false;
+        var c = null;
+        /*
+        alert(a && b);//true
+        alert(a && c);//null
+        alert(b && d);//false
+        alert(c && d);//null
+        alert(a && b && d);//false
+        alert(b && c && d);//null
+        */
+
+        //||或运算
+        //当表达式全为false时，返回最后一个表达式的值
+        //当表达式有一个为true时，返回第一个为true的表达式的值
+        alert(a || b);//"abc"
+        alert(a || c);//"abc"
+        alert(b || d);//true
+        alert(c || d);//false
+        alert(a || b && d);//"abc"
+        alert(b || c && d);//true
+        alert(a || b || d);//"abc"
+        alert(b || c || d);//true
+
+        //从上述判断得到一个结果，那就是&&与运算优先级大于||或运算
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

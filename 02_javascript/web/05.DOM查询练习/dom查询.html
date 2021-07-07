@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dom查询</title>
+<link rel="stylesheet" type="text/css" href="style/css.css" />
+<script type="text/javascript">
+	window.onload = function(){
+		//1.查找#bj节点
+		let btn01Ele = document.getElementById("btn01");
+		btn01Ele.onclick = function () {
+			let element = document.getElementById("bj");
+			alert(element.innerHTML);//北京
+		}
+		//2.查找所有li节点
+		var btn02Ele = document.getElementById("btn02");
+		btn02Ele.onclick = function(){
+			let elements = document.getElementsByTagName("li");
+			alert(elements.length);//11
+		};
+		//3.查找name=gender的所有节点
+		var btn03Ele = document.getElementById("btn03");
+		btn03Ele.onclick = function(){
+			let elements = document.getElementsByName("gender");
+			alert(elements.length);//2
+		};
+		//4.查找#city下所有li节点
+		var btn04Ele = document.getElementById("btn04");
+		btn04Ele.onclick = function(){
+			let cities = document.getElementById("city");
+			alert(cities.children.length);//4
+		};
+		//5.返回#city的所有子节点
+		var btn05Ele = document.getElementById("btn05");
+		btn05Ele.onclick = function(){
+			let cities = document.getElementById("city");
+			alert(cities.childNodes.length);//9
+			//为什么是9个呢？因为空格也算作节点
+		};
+		//6.返回#phone的第一个子节点
+		var btn06Ele = document.getElementById("btn06");
+		btn06Ele.onclick = function(){
+			let elements = document.getElementById("phone");
+			alert(elements.firstChild.innerHTML);//IOS
+		};
+		//7.返回#bj的父节点
+		var btn07Ele = document.getElementById("btn07");
+		btn07Ele.onclick = function(){
+			let element = document.getElementById("bj");
+			alert(element.parentNode);//ulList
+		};
+		//8.返回#android的前一个兄弟节点
+		var btn08Ele = document.getElementById("btn08");
+		btn08Ele.onclick = function(){
+			let element = document.getElementById("android");
+			alert(element.previousSibling.innerHTML);//IOS
+		};
+		//9.读取#username的value属性值
+		var btn09Ele = document.getElementById("btn09");
+		btn09Ele.onclick = function(){
+			let element = document.getElementById("username");
+			alert(element.value);//根据用户实时输入的值来决定
+		};
+		//10.设置#username的value属性值
+		var btn10Ele = document.getElementById("btn10");
+		btn10Ele.onclick = function(){
+			let element = document.getElementById("username");
+			element.value = "342786232";
+		};
+		//11.返回#bj的文本值
+		var btn11Ele = document.getElementById("btn11");
+		btn11Ele.onclick = function(){
+			let element = document.getElementById("bj");
+			alert(element.innerText);//北京
+		};
+	};
+</script>
+</head>
+<body>
+<div id="total">
+	<div class="inner">
+		<p>
+			你喜欢哪个城市?
+		</p>
+
+		<ul id="city">
+			<li id="bj">北京</li>
+			<li>上海</li>
+			<li>东京</li>
+			<li>首尔</li>
+		</ul>
+
+		<br>
+		<br>
+
+		<p>
+			你喜欢哪款单机游戏?
+		</p>
+
+		<ul id="game">
+			<li id="rl">红警</li>
+			<li>实况</li>
+			<li>极品飞车</li>
+			<li>魔兽</li>
+		</ul>
+
+		<br />
+		<br />
+
+		<p>
+			你手机的操作系统是?
+		</p>
+
+		<ul id="phone"><li>IOS</li><li id="android">Android</li><li>Windows Phone</li></ul>
+	</div>
+
+	<div class="inner">
+		gender:
+		<input type="radio" name="gender" value="male"/>
+		Male
+		<input type="radio" name="gender" value="female"/>
+		Female
+		<br>
+		<br>
+		name:
+		<input type="text" name="name" id="username" value="abcde"/>
+	</div>
+</div>
+<div id="btnList">
+	<div><button id="btn01">查找#bj节点</button></div>
+	<div><button id="btn02">查找所有li节点</button></div>
+	<div><button id="btn03">查找name=gender的所有节点</button></div>
+	<div><button id="btn04">查找#city下所有li节点</button></div>
+	<div><button id="btn05">返回#city的所有子节点</button></div>
+	<div><button id="btn06">返回#phone的第一个子节点</button></div>
+	<div><button id="btn07">返回#bj的父节点</button></div>
+	<div><button id="btn08">返回#android的前一个兄弟节点</button></div>
+	<div><button id="btn09">返回#username的value属性值</button></div>
+	<div><button id="btn10">设置#username的value属性值</button></div>
+	<div><button id="btn11">返回#bj的文本值</button></div>
+</div>
+</body>
+</html>

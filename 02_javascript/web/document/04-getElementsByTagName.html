@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByTagName</title>
+    <script type="text/javascript">
+        //全选
+        function checkAll() {
+            //通过document对象getElementsByTagName()方法返回一个多个标签对象组成的集合collection
+            let inputs = document.getElementsByTagName("input");
+            //inputs是一个collection集合
+            //alert(inputs);//[object HTMLCollection]
+            //集合的操作跟数组相似
+            //alert(inputs[4].value);
+            //集合当中所有元素的顺序跟html声明这些标签的从上往下的顺序有关
+            //checked属性用来判断复选框是否被选中的状态，true就是被选中状态，false就是没有被选中状态
+            //checked属性是可读、可写的，不仅仅可以读取，也可以进行重新赋值
+            //alert(elements[2].check);//true
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].checked = true;
+            }
+
+        }
+        //全不选
+        function checkNo() {
+            let inputs = document.getElementsByTagName("input");
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].checked = false;
+            }
+        }
+        //反选
+        function checkReverse() {
+            let inputs = document.getElementsByTagName("input");
+            for (let i = 0; i < inputs.length; i++) {
+                //方式一：if ,else
+                /*if (inputs[i].checked) {
+                    inputs[i].checked = false;
+                } else {
+                    inputs[i].checked = true;
+                }*/
+                //方式二：!取反
+                inputs[i].checked = !inputs[i].checked;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                兴趣爱好：
+                <input type="checkbox" name="hobby" value="cpp" />C++
+                <input type="checkbox" name="hobby" value="JavaScript" />JavaScript
+                <input type="checkbox" name="hobby" value="Java" />Java
+                <input type="checkbox" name="hobby" value="Python" />Python
+                <input type="checkbox" name="hobby" value="CSharp" />C#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="checkAll();">全选</button>
+                <button onclick="checkNo();">全不选</button>
+                <button onclick="checkReverse();">反选</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

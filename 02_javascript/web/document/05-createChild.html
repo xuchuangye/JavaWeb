@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createChild</title>
+    <script type="text/javascript">
+        //整个页面加载完毕之后
+        window.onload = function () {
+            //createElement创建
+            let divobj = document.createElement("div");
+            //alert(htmlDivElement);//[object HTMLDivElement]
+            //divObj.innerHTML = "我爱你";
+            //body需要在页面加载完成之后进行添加子节点操作
+            //document.body.appendChild(divObj);
+            //创建文本节点
+            let text = document.createTextNode("我爱你");
+            //添加这个文本节点在div节点当中
+            divobj.appendChild(text);
+            //给body添加子节点
+            document.body.appendChild(divobj);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

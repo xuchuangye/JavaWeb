@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Untitled Document</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				font-size: 13px;
+				line-height: 130%;
+				padding: 60px;
+			}
+			#content{
+				width: 220px;
+				border: 1px solid #0050D0;
+				background: #96E555;
+			}
+			span{
+				width: 200px;
+				margin: 10px;
+				background: #666666;
+				cursor: pointer;
+				color: white;
+				display: block;
+			}
+			p{
+				width: 200px;
+				background: #888;
+				color: white;
+				height: 16px;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-1.7.2.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//父元素和子元素同时绑定同一个事件，那么如果子元素响应该事件，父元素也会响应该事件，这就是事件的冒泡
+				$("#content").click(function () {
+					alert("父元素div点击事件");
+				});
+				$("span").click(function () {
+					alert("子元素span点击事件");
+					//阻止事件的冒泡
+					return false;
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			外层div元素
+			<span>内层span元素</span>
+			外层div元素
+		</div>
+		
+		<div id="msg"></div>	
+		
+		<br><br>
+		<a href="http://www.hao123.com">WWW.HAO123.COM</a>	
+	</body>
+</html>
+

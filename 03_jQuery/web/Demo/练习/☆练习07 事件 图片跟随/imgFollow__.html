@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+		text-align: center;
+	}
+	#small {
+		margin-top: 150px;
+	}
+	#showBig {
+		position: absolute;
+		display: none;
+	}
+</style>
+<script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#small").bind("mouseover mouseout mousemove",function (event) {
+			console.log(event.type);
+			//鼠标移入
+			if (event.type == "mouseover") {
+				$("#showBig").show();
+			}else if (event.type == "mouseout") {//鼠标移出
+				$("#showBig").hide();
+			}else if (event.type == "mousemove") {//鼠标移动
+				$("#showBig").offset({
+					top : event.pageY + 10,//event.pageX x轴方向的偏移量
+					left : event.pageX + 10//event.pageY y轴方向的偏移量
+				});
+			}
+		});
+	});
+</script>
+</head>
+<body>
+
+	<img id="small" src="img/small.jpg" />
+	
+	<div id="showBig">
+		<img src="img/big.jpg">
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>variable</title>
+    <script>
+        var i = null;
+        alert(i);//null
+        var j;
+        alert(j);//undefined
+        var a = 12;
+        var b = "12";
+        //JavaScript计算数据之前，首先会进行转型，如果转型成功，则输出正确结果
+        alert(a * b);//144.输出正确结果
+        //JavaScript计算数据之前，首先会进行转型，如果转型失败，则输出错误结果
+        var c = "abc";
+        alert(a * c);//NaN
+    </script>
+</head>
+<body>
+
+</body>
+</html>

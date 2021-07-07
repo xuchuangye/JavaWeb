@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange</title>
+    <script type="text/javascript">
+        onchangefun = function () {
+            console.log("静态注册事件onchange");
+        }
+        window.onload = function () {
+            //获取标签对象
+            let element = document.getElementById("select01");
+            alert(element);//[object HTMLSelectElement]
+            //通过标签对象.事件名
+            element.onchange = function () {
+                console.log("动态注册事件onchange");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 静态注册事件 -->
+    请选择你心中的女神<br/>
+    <select onchange="onchangefun();">
+        <option>母亲</option>
+        <option>杨幂</option>
+        <option>赵丽颖</option>
+        <option>古力娜扎</option>
+        <option>迪丽热巴</option>
+    </select>
+    <br/>
+    <!-- 动态注册事件 -->
+    请选择你心中的男神<br/>
+    <select id="select01">
+        <option>父亲</option>
+        <option>胡歌</option>
+        <option>霍建华</option>
+        <option>于和伟</option>
+        <option>唐国强</option>
+    </select>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onsubmit</title>
+    <script type="text/javascript">
+        function onsubmitfun() {
+            //提交表单之前要验证所有的表单项是否合法，只要有一个不合法，那么就需要阻止表单的提交
+            alert("静态注册onsubmit事件，发现不合法");
+            //return false 可以阻止表单的提交，但前提是静态注册事件方式onsubmit=""，里面必须写return
+            //return false;
+            //return true 表示表单可以提交
+            return true;
+        }
+        window.onload = function () {
+            //提交表单之前要验证所有的表单项是否合法，只要有一个不合法，那么就需要阻止表单的提交
+            //获取标签对象
+            let element = document.getElementById("form01");
+            //alert(element);//[object HTMLInputElement]
+            //通过标签对象.事件名
+            element.onsubmit = function () {
+                alert("动态注册submit事件，发现不合法");
+                //return false可以阻止表单的提交
+                //return false;
+                //return true 表示表单可以提交
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="http://localhost:8080" method="get" onsubmit="return onsubmitfun();">
+        <input type="submit" value="静态提交" />
+    </form>
+    <form id="form01" action="http://localhost:8080" method="post">
+        <input type="submit" value="动态提交" />
+    </form>
+</body>
+</html>

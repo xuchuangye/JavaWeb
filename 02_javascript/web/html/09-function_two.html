@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script type="text/javascript">
+        /*
+        使用变量来接收函数的定义
+        var 函数名 = function(形参列表) {
+            函数体;
+            [return 值;]
+        }
+        */
+        var fun = function() {
+            alert("无参函数被调用了");
+        }
+        //fun();
+        var funsum = function(a, b) {
+            alert(a + b);
+        }
+        //funsum(10, 20);
+        var fundouble = function(i, j) {
+            return i + j;
+        }
+        alert(fundouble(10.2, 20.8));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

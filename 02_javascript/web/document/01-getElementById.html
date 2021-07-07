@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementById</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        function onclickfun() {
+            //获取标签对象
+            let usernameObj = document.getElementById("username");
+            //alert(element);//[object HTMLInputElement] dom对象
+            //获取dom标签对象的value属性
+            let usernameText = usernameObj.value;
+            //此时value的值是用户实时输入的值
+            //alert(value);
+            //获取span标签的dom对象
+            let spanobj = document.getElementById("span01");
+            //innerHTML属性可读可写
+            //alert(spanobj.innerHTML);
+
+            //字母，数字，下划线，5-12个字符
+            let patt = /^\w{5,12}$/;
+            //test方法测试用户输入的文本是否匹配正则表达式
+            // if (patt.test(usernameText)) {
+            //     //innerHTML设置起始标签和结束标签中间的内容
+            //     spanobj.innerHTML = "";
+            // } else {
+            //     spanobj.innerHTML = "用户输入不合法";
+            // }
+            if (patt.test(usernameText)) {
+                spanobj.innerHTML = "<img src='right.png' width=\"15px\" height=\"15px\"/>";
+            } else {
+                spanobj.innerHTML = "<img src='wrong.png' width=\"15px\" height=\"15px\"/>";
+            }
+        }
+    </script>
+</head>
+<body>
+    用户名：<input id="username" type="text" value="msg"/>
+    <span id="span01">
+
+    </span>
+    <button onclick="onclickfun();">校验</button>
+</body>
+</html>

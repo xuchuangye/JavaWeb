@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Demo/script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //内部插入
+            //appendTo()在标签内所有内容之后
+            //$("<h1>标题</h1>").appendTo("div");
+            //prependTo()在标签内所有内容之前
+            //$("<h1>标题</h1>").prependTo("div");
+
+            //外部插入
+            //insertAfter()在标签外之后
+            //$("<h1>标题</h1>").insertAfter("div");
+            //insertBefore()在标签外之前
+            //$("<h1>标题</h1>").insertBefore("div");
+
+            //替换
+            //后面h1标题替换前面的div标签
+            //$("div:first").replaceWith($("<h1>标题</h1>"));
+            //用前面的h1标题替换所有后面的div标签
+            //$("<h1>标题</h1>").replaceAll($("div"));
+
+            //删除和清空
+            //$("div:first").remove();//删除该标签
+            $("div:first").empty();//清空该标签的内容innerHTML
+        });
+    </script>
+</head>
+<body>
+    <div>我是div标签1</div>
+    <div>我是div标签2</div>
+</body>
+</html>

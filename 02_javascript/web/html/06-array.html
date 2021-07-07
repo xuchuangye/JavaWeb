@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+    <script type="text/javascript">
+        //var arr = [];//空数组
+        var arr = [true,'c',"hello"];
+        arr[0] = 12;
+        alert(arr.length);//1
+        //通过数组下标的方式赋值，那么最大的下标值，就会自动给数组长度扩容至最大的下标值
+        arr[2] = "abc";
+        alert(arr.length);//3
+        //任意变量只要没有赋值，结果就是undefined
+        alert(arr[9]);//undefined
+        //只能通过数组下标的方式进行数组长度的扩容
+        alert(arr.length);//3
+        for (var i = 0;i < arr.length; i++) {
+            alert(arr[i]);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

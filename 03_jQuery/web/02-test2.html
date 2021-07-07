@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html_text_val</title>
+    <script type="text/javascript" src="Democript/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //html()不传参数就是获取，传递参数就是设置
+            //alert( $("div").html() );//输出div标签中的标签和文本
+            //$("div").html("<h1>我是h1标签</h1>");
+            //text()不传参数就是获取，传递参数就是设置
+            //alert( $("div").text() );//输出div标签中的文本
+            //$("div").text("<h1>我是div中的h1标签</h1>");//将div标签内所有的内容全部替换成文本
+
+            ///val()设置和获取表单项的内容
+            $("#btn").click(function () {
+                //val()不传参数就是获取，传递参数就是设置
+                //alert($("#username").val());
+                $("#username").val("123456");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        我是div标签
+        <br/>
+        <span>我是div中的span标签</span>
+    </div>
+    <input type="text" id="username"/>
+    <br/>
+    <button id="btn">设置和获取val</button>
+</body>
+</html>

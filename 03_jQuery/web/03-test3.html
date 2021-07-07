@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html_text_val</title>
+    <script type="text/javascript" src="Democript/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //attr()设置和获取属性的值，一个参数是获取，两个参数是设置
+            //alert( $(":checkbox").attr("name") );
+            //$(":checkbox").attr("name","abc") ;
+            //官方对于返回undefined是错误的
+            //alert($(":checkbox:first").attr("checked"));//undefined
+            //alert($(":checkbox:first").attr("checked"));//checked
+            //对于用户来说，返回checked和undefined不够简单明了
+            //prop()设置和获取属性的值只推荐checked，readOnly，selected，disabled
+            //alert( $(":checkbox:first").prop("checked") );//true
+            //alert( $(":checkbox:first").prop("checked") );//false
+            //对于用户来说true和false更加简洁明了
+
+            //attr()还可以设置和获取用户自定义属性
+            //$(":checkbox:first").attr("checked","checked");
+            $(":checkbox:first").attr("abc","good");
+            alert($(":checkbox:first").attr("abc"));
+        });
+    </script>
+</head>
+<body>
+    多选：
+    <br/>
+    <input name="checkbox" type="checkbox" value="checkbox"/>checkbox1
+    <br/>
+    <input name="checkbox" type="checkbox" value="checkbox"/>checkbox2
+</body>
+</html>

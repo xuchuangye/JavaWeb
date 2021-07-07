@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    <?xml version="1.0" encoding="utf-8" ?>
+    以上是xml的声明
+    version 表示xml当前的版本
+    encoding 表示xml当前的编码集
+-->
+<books>
+    <book sn="SN45123249021">
+        <name>人性的弱点</name>
+        <author>老铁</author>
+        <price>10.5</price>
+    </book>
+    <book sn="SN45123249022">
+        <name>厚黑学</name>
+        <author>李先生</author>
+        <price>12.5</price>
+    </book>
+</books>

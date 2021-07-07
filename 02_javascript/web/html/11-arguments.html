@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments</title>
+    <script type="text/javascript">
+        function fun_() {
+            alert("无参函数的隐性参数的个数随着传入函数参数个数的变化而变化");
+            alert(arguments.length);//5
+            alert(arguments[0]);//true
+            alert(arguments[1]);//1
+            alert(arguments[2]);//c
+        }
+        fun_(true, 1,'c',"abc",null);
+        /*编写一个函数，用于计算所有参数相加的和，并返回该值*/
+        let sum = 0;
+        function fun() {
+            for (let i = 0;i <arguments.length;i++) {
+                if (typeof(arguments[i]) == "number")
+                 sum += arguments[i];
+            }
+            return sum;
+        }
+        alert(fun(1,2,3,4,"true",5,6,7,8,9,10));//55
+    </script>
+</head>
+<body>
+
+</body>
+</html>

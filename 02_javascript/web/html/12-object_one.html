@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+    <script type="text/javascript">
+        let obj = new Object();
+        obj.name = "星爷";
+        obj.age = 18;
+        obj.fun = function() {
+            alert("姓名：" + this.name + "，年龄：" + this.age);
+        }
+
+        alert(obj.name);
+        alert(obj.age);
+
+        obj.fun();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

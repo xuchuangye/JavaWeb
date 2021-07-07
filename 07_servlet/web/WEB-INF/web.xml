@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- servlet标签给Tomcat服务器配置Servlet程序 -->
+    <servlet>
+        <!-- servlet-name标签是给Servlet程序起别名(一般是类名) -->
+        <servlet-name>HelloServlet</servlet-name>
+        <!-- servlet-class标签是Servlet程序的全类名 -->
+        <servlet-class>com.atguigu.servlet.HelloServlet</servlet-class>
+        <!-- init-param标签是初始化参数 -->
+        <init-param>
+            <!-- 参数名 -->
+            <param-name>username</param-name>
+            <!-- 参数值 -->
+            <param-value>root</param-value>
+        </init-param>
+        <!-- init-param标签可以配置多个-->
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://localhost:3306/test</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>HelloServlet2</servlet-name>
+        <servlet-class>com.atguigu.servlet.HelloServlet2</servlet-class>
+        <!-- init-param标签是初始化参数 -->
+        <init-param>
+            <!-- 参数名 -->
+            <param-name>username</param-name>
+            <!-- 参数值 -->
+            <param-value>root</param-value>
+        </init-param>
+        <!-- init-param标签可以配置多个-->
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://localhost:3306/test</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>HelloServlet3</servlet-name>
+        <servlet-class>com.atguigu.servlet.HelloServlet3</servlet-class>
+    </servlet>
+
+
+    <!-- servlet-mapping标签给Servlet程序配置访问地址 -->
+    <servlet-mapping>
+        <!-- servlet-name标签的作用是告诉服务器，当前配置的地址是给哪一个Servlet程序使用 -->
+        <servlet-name>HelloServlet</servlet-name>
+        <!-- url-pattern标签配置访问地址 -->
+        <!-- / 斜杠在服务器解析的时候，表示地址为：http://ip:port/工程路径 -->
+        <!-- /hello 斜杠在服务器解析的时候，表示地址为：http://ip:port/工程路径 -->
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloServlet2</servlet-name>
+        <url-pattern>/hello2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloServlet3</servlet-name>
+        <url-pattern>/hello3</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ContextServlet</servlet-name>
+        <servlet-class>com.atguigu.servlet.ContextServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ContextServlet1</servlet-name>
+        <servlet-class>com.atguigu.servlet.ContextServlet1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ContextServlet2</servlet-name>
+        <servlet-class>com.atguigu.servlet.ContextServlet2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContextServlet</servlet-name>
+        <url-pattern>/contextServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContextServlet1</servlet-name>
+        <url-pattern>/context1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContextServlet2</servlet-name>
+        <url-pattern>/context2</url-pattern>
+    </servlet-mapping>
+    <!-- context-param标签配置上下文参数信息 -->
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>691020</param-value>
+    </context-param>
+
+</web-app>

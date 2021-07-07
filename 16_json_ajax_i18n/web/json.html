@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			// json的定义
+			let jsonObj = {
+				'age':18,
+				'key':'value',
+				'isClose' : true,
+				'username':['root',false,100],
+				'obj':{
+					'obj1':12,
+					'obj2':'object'
+				},
+				'objArray':[{"key1":"value1"},{"key2":"value2"}]
+			};
+			// json的访问
+			/*alert(jsonObj.age);//访问Number类型
+			alert(jsonObj.key);//访问字符串类型
+			alert(jsonObj.isClose);//访问布尔型
+
+			//打印输出数组中的所有元素
+			alert(jsonObj.username);//访问数组
+
+			//for循环打印输出数组中的所有元素
+			for (let i = 0; i < jsonObj.username.length; i++) {
+				alert(jsonObj.username[i]);//访问数组中的元素
+			}
+			alert(jsonObj.obj.obj1);//访问对象的属性
+			alert(jsonObj.obj.obj2);//访问对象的属性
+
+			alert(jsonObj.objArray[0].key1);//访问数组中对象的属性
+			alert(jsonObj.objArray[1].key2);//访问数组中对象的属性
+			 */
+			// json对象转字符串
+			let jsonString = JSON.stringify(jsonObj);
+			alert(jsonString);
+			// json字符串转json对象
+			let jsonObj_ = JSON.parse(jsonString);
+			alert(jsonObj_);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

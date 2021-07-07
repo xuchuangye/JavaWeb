@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        iframe {
+            width: 500px;
+            height: 700px;
+        }
+    </style>
+    <script type="text/javascript" src="Demo/script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        //原生js页面加载后执行
+        window.onload =function () {
+            alert("原生js页面加载1")
+        }
+        window.onload =function () {
+            alert("原生js页面加载2")
+        }
+        //原生js页面加载只执行最后一次赋值function
+        window.onload =function () {
+            alert("原生js页面加载3")
+        }
+        //jQuery页面加载先执行
+        $(function () {
+            alert("jQuery页面加载1")
+        });
+        $(function () {
+            alert("jQuery页面加载2")
+        });
+        //jQuery页面加载全部按照注册function顺序执行
+        $(function () {
+            alert("jQuery页面加载3")
+        });
+    </script>
+</head>
+<body>
+    <div>我是div标签</div>
+    <iframe src="http://localhost:8080"></iframe>
+    <img src="http://localhost:8080/1.jpg"/>
+</body>
+</html>

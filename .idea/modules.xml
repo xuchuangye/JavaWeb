@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_html_css/01_html_css.iml" filepath="$PROJECT_DIR$/01_html_css/01_html_css.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_javascript/02_javascript.iml" filepath="$PROJECT_DIR$/02_javascript/02_javascript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_jQuery/03_jQuery.iml" filepath="$PROJECT_DIR$/03_jQuery/03_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_book_static/04_book_static.iml" filepath="$PROJECT_DIR$/04_book_static/04_book_static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_xml/05_xml.iml" filepath="$PROJECT_DIR$/05_xml/05_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_web/06_web.iml" filepath="$PROJECT_DIR$/06_web/06_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_servlet/07_servlet.iml" filepath="$PROJECT_DIR$/07_servlet/07_servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_servlet/08_servlet.iml" filepath="$PROJECT_DIR$/08_servlet/08_servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_jsp/09_jsp.iml" filepath="$PROJECT_DIR$/09_jsp/09_jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10_EL_JSTL/10_EL_JSTL.iml" filepath="$PROJECT_DIR$/10_EL_JSTL/10_EL_JSTL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13_cookie_session/13_cookie_session.iml" filepath="$PROJECT_DIR$/13_cookie_session/13_cookie_session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15_filter/15_filter.iml" filepath="$PROJECT_DIR$/15_filter/15_filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/16_json_ajax_i18n/16_json_ajax_i18n.iml" filepath="$PROJECT_DIR$/16_json_ajax_i18n/16_json_ajax_i18n.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb_.iml" filepath="$PROJECT_DIR$/JavaWeb_.iml" />
+      <module fileurl="file://$PROJECT_DIR$/book/book.iml" filepath="$PROJECT_DIR$/book/book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/temp/temp.iml" filepath="$PROJECT_DIR$/temp/temp.iml" />
+    </modules>
+  </component>
+</project>

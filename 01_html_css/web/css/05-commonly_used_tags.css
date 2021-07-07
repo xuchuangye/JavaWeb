@@ -1,0 +1,38 @@
+div {
+    /*颜色*/
+    color: red;
+    /*字体大小*/
+    font-size: 30px;
+    /*宽度*/
+    width: 300px;
+    /*高度*/
+    height: 300px;
+    /*背景颜色*/
+    background-color: black;
+    /*自动居中*/
+    margin-left: auto;
+    /**/
+    margin-right: auto;
+    /*边框宽度、样式、颜色*/
+    border: 1px solid yellow;
+    /*文本居中*/
+    text-align: center;
+}
+table {
+    /*宽度*/
+    width: 400px;
+    /*高度*/
+    height: 200px;
+    /*边框宽度、样式、颜色*/
+    border: 2px solid red;
+    /*合并表中所有的单元格边框线*/
+    border-collapse: collapse;
+}
+td,th {
+    /*边框宽度、样式、颜色*/
+    border: 2px solid red;
+}
+a {
+    /*去除超链接下划线*/
+    text-decoration: none;
+}
